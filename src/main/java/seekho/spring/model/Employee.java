@@ -4,17 +4,32 @@ public class Employee {
 	
 	private int id;
 	private String name, gender;
+	
+	private Address address;
+	
 	public Employee() {
 		super();
 		System.out.println("Employee.employee()");
 	
 	}
-	public Employee(int id, String name, String gender) {
+	public Employee(int id, String name, String gender, Address address) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
+		this.address = address;
 		System.out.println("Employee.employee(3) ");
+	}
+	
+	
+	
+	public Address getAddress() {
+		return address;
+	}
+	
+	public void setAddress(Address address) {
+		this.address = address;
+		System.out.println("Employee.setAddress()");
 	}
 	
 	public int getId() {
@@ -43,11 +58,11 @@ public class Employee {
 		this.gender = gender;
 		System.out.println("Employee.setGender()");
 	}
-	
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
 	}
+	
 	
 	
 	
