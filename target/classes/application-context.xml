@@ -17,7 +17,7 @@
     
     
    <!--<bean name="emp1" class="seekho.spring.model.Employee" autowire="byName">-->
-   <bean name="emp1" class="seekho.spring.model.Employee"  init-method="xmlInitMethod" destroy-method="xmlDestroyMehod" >
+   <bean name="emp1" class="seekho.spring.model.Employee" autowire="byType" init-method="xmlInitMethod" destroy-method="xmlDestroyMehod" >
          
           <property name="id" value="1011" />
           <property name="name" value="Susheel" />
