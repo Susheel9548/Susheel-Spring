@@ -7,7 +7,7 @@ public class Address{
 	
 	public Address() {
 		super();
-		System.out.println("Address.Address()");
+		
 	
 	}
 
@@ -15,7 +15,7 @@ public class Address{
 		super();
 		this.city = city;
 		this.state = state;
-		System.out.println("Address.Address(constPera2)");
+		
 	}
 	
 	
@@ -25,7 +25,6 @@ public class Address{
 	}
 
 	public void setCity(String city) {
-		System.out.println("Address.setCity()");
 		this.city = city;
 	}
 
@@ -35,7 +34,6 @@ public class Address{
 
 	public void setState(String state) {
 		this.state = state;
-		System.out.println("Address.setState()");
 	}
 
 	@Override

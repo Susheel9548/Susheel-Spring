@@ -7,22 +7,19 @@
     <!-- bean definitions here -->
     
    <!--<bean name="address" class="seekho.spring.model.Address">-->
-   <bean name="address1" class="seekho.spring.model.Address">
+   <bean name="address1" class="seekho.spring.model.Address" scope="prototype">
     
-           <property name="city" value="Pune" />
-           <property name="state" value="Maharashtra" />
+           <property name="city" value="Hisar" />
+           <property name="state" value="Hariyana" />
     
    
     </bean>
     
     
    <!--<bean name="emp1" class="seekho.spring.model.Employee" autowire="byName">-->
-   <bean name="emp1" class="seekho.spring.model.Employee" autowire="byType">
+   <bean id="emp1" class="seekho.spring.model.Employee" autowire="byType">
+        <lookup-method name="applyAddress" bean="address1"/>
          
-          <property name="id" value="1011" />
-          <property name="name" value="Susheel" />
-          <property name="gender" value="male" />
-          
     
     
     </bean>
