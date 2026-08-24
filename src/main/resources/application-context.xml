@@ -5,21 +5,21 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
+    <!--Abstract bean allow you to define common properties and configuration
+    once and reuse them across multiple bean-->
     
-    <bean name="emp1" class="seekho.spring.model.Employee">
+    <bean id="p1" abstract="true">
          
-          <property name="id" value="1011" />
-          <property name="name" value="Susheel" />
-          <property name="gender" value="male" />
+          <property name="companyName" value="TCS" />
+          <property name="empId" value="101" />
     
     
     </bean>
     
     
-     <bean name="emp2" class="seekho.spring.model.Employee">
-          <constructor-arg name="id" value="222" />
-          <constructor-arg name="name" value="Shalu" />
-          <constructor-arg name="gender" value="female" />
+     <bean id="child" class="seekho.spring.model.Child" parent="p1">
+       <property name="salary" value="220000"/>
+       <property name="age" value="18"/>
      
      </bean>
     
