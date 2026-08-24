@@ -1,26 +1,34 @@
 package seekho.spring.model;
 
-public class Employee {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Employee implements InitializingBean , DisposableBean{
 	
 	private int id;
 	private String name, gender;
 	
 	private Address address;
 	
-	public Employee() {
-		super();
-		System.out.println("Employee.employee()");
-	
-	}
-	public Employee(int id, String name, String gender, Address address) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-		this.address = address;
-		System.out.println("Employee.employee(3) ");
+//	intializingBean Method
+	@Override
+	public void afterPropertiesSet() throws Exception{
+		System.out.println("Employee.afterPropertiesSet()");
 	}
 	
+	//DisposableBean Method
+	@Override
+	public void destroy() throws Exception{
+		System.out.println("Emloyee.destroy()");
+	}
+	
+	private void xmlInitMethod() {
+		System.out.println("Employee.xmlInitMethod");
+	}
+	
+	private void xmlDestroyMehod() {
+		System.out.println("Employee.xmlDestriyMethod");
+	}
 	
 	
 	public Address getAddress() {

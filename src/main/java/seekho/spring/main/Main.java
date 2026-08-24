@@ -10,11 +10,13 @@ public class Main {
 	public static void main(String[] args) { 
 		
 		
-		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
+		ClassPathXmlApplicationContext factory = new ClassPathXmlApplicationContext("application-context.xml");
 		
-		Employee bean = ioc.getBean("emp1",Employee.class);
+		Employee bean = factory.getBean("emp1",Employee.class);
 		
 		System.out.println(bean);
+		
+		factory.registerShutdownHook();
 
 	 
  

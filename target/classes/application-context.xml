@@ -7,7 +7,7 @@
     <!-- bean definitions here -->
     
    <!--<bean name="address" class="seekho.spring.model.Address">-->
-   <bean name="address1" class="seekho.spring.model.Address">
+   <bean name="address1" class="seekho.spring.model.Address" scope="prototype">
     
            <property name="city" value="Pune" />
            <property name="state" value="Maharashtra" />
@@ -17,7 +17,7 @@
     
     
    <!--<bean name="emp1" class="seekho.spring.model.Employee" autowire="byName">-->
-   <bean name="emp1" class="seekho.spring.model.Employee" autowire="byType">
+   <bean name="emp1" class="seekho.spring.model.Employee"  init-method="xmlInitMethod" destroy-method="xmlDestroyMehod" >
          
           <property name="id" value="1011" />
           <property name="name" value="Susheel" />
