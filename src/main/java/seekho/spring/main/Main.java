@@ -12,14 +12,15 @@ public class Main {
 		
 		ApplicationContext ioc = new ClassPathXmlApplicationContext("application-context.xml");
 		
-		Employee bean = ioc.getBean("emp1",Employee.class);
+		Employee bean1 = ioc.getBean("emp1",Employee.class);
+		Employee bean2 = ioc.getBean("emp1",Employee.class);
+		Employee bean3 = ioc.getBean("emp1",Employee.class);
+		Employee bean4 = ioc.getBean("emp1",Employee.class);
 		
-		System.out.println(bean);
-
-
-		Employee bean2 = ioc.getBean("emp2",Employee.class);
-		
+		System.out.println(bean1);
 		System.out.println(bean2);
+		System.out.println(bean3);
+		System.out.println(bean4);
 
 
 	}

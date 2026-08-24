@@ -6,8 +6,7 @@
 
     <!-- bean definitions here -->
     
-    <bean name="emp1" class="seekho.spring.model.Employee">
-         
+    <bean name="emp1" class="seekho.spring.model.Employee" scope="prototype">
           <property name="id" value="1011" />
           <property name="name" value="Susheel" />
           <property name="gender" value="male" />
@@ -16,12 +15,5 @@
     </bean>
     
     
-     <bean name="emp2" class="seekho.spring.model.Employee">
-          <constructor-arg name="id" value="222" />
-          <constructor-arg name="name" value="Shalu" />
-          <constructor-arg name="gender" value="female" />
-     
-     </bean>
     
-
 </beans>
