@@ -6,7 +6,8 @@
 
     <!-- bean definitions here -->
     
-    <bean name="add1" class="seekho.spring.model.Address">
+   <!--<bean name="address" class="seekho.spring.model.Address">-->
+   <bean name="address1" class="seekho.spring.model.Address">
     
            <property name="city" value="Pune" />
            <property name="state" value="Maharashtra" />
@@ -15,35 +16,21 @@
     </bean>
     
     
-    <bean name="emp1" class="seekho.spring.model.Employee">
+   <!--<bean name="emp1" class="seekho.spring.model.Employee" autowire="byName">-->
+   <bean name="emp1" class="seekho.spring.model.Employee" autowire="byType">
          
           <property name="id" value="1011" />
           <property name="name" value="Susheel" />
           <property name="gender" value="male" />
-          <property name="address" ref="add1" />
+          
     
     
     </bean>
     
     
-    <bean name="add2" class="seekho.spring.model.Address">
-    
-           <constructor-arg name="city" value="Noida" />
-           <constructor-arg name="state" value="UP" />
-    
-   
-    </bean>
-    
-    
-    
-     <bean name="emp2" class="seekho.spring.model.Employee">
-     
-          <constructor-arg name="id" value="222" />
-          <constructor-arg name="name" value="Shalu" />
-          <constructor-arg name="gender" value="female" />
-          <constructor-arg name="address" ref="add2" />
-     
-     </bean>
   
+    
+    
+    
 
 </beans>
