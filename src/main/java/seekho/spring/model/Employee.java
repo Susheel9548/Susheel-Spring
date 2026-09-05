@@ -1,9 +1,17 @@
 package seekho.spring.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 	
 	private int id;
 	private String name, gender;
+	
+    @Autowired
+	private IAddress address;
+	
 	public Employee() {
 		super();
 		System.out.println("Employee.employee()");
@@ -15,6 +23,17 @@ public class Employee {
 		this.name = name;
 		this.gender = gender;
 		System.out.println("Employee.employee(3) ");
+	}
+	
+	
+	public IAddress getAddress() {
+		return address;
+	}
+	
+	@Autowired
+	public void setAddress(IAddress address) {
+		this.address = address;
+		System.out.println("Employeee.setAddress()");
 	}
 	
 	public int getId() {
@@ -44,11 +63,11 @@ public class Employee {
 		System.out.println("Employee.setGender()");
 	}
 	
+	
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
 	}
-	
 	
 	
 	
